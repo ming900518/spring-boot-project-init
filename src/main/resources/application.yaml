@@ -1,0 +1,66 @@
+initializr:
+  group-id:
+    value: su.mingchang
+  javaVersions:
+    - id: 17
+      default: true
+  languages:
+    - name: Java
+      id: java
+      default: true
+  packagings:
+    - name: Jar
+      id: jar
+      default: true
+  types:
+    - name: Gradle Project
+      id: gradle-project
+      description: Generate Gradle Project (Default)
+      tags:
+        build: gradle
+        format: project
+      default: true
+      action: /starter.zip
+  dependencies:
+    - name: Spring Boot Actuator
+      content:
+        - name: Actuator
+          id: actuator
+          groupId: org.springframework.boot
+          artifactId: spring-boot-starter-actuator
+    - name: Spring Web (MVC)
+      content:
+        - name: Web
+          id: web
+          groupId: org.springframework.boot
+          artifactId: spring-boot-starter-web
+    - name: Spring Web (WebFlux)
+      content:
+        - name: WebFlux
+          id: webflux
+          groupId: org.springframework.boot
+          artifactId: spring-boot-starter-webflux
+    - name: MyBatis
+      content:
+        - name: MyBatis
+          id: mybatis
+          groupId: org.mybatis.spring.boot
+          artifactId: mybatis-spring-boot-starter
+    - name: MariaDB Connector/J
+      content:
+        - name: MariaDB
+          id: mariadb
+          groupId: org.mariadb.jdbc
+          artifactId: mariadb-java-client
+    - name: Spring Security
+      content:
+        - name: Security
+          id: security
+          groupId: org.springframework.boot
+          artifactId: spring-boot-starter-security
+    - name: Spring Boot DevTools
+      content:
+        - name: DevTools
+          id: devtools
+          groupId: org.springframework.boot
+          artifactId: spring-boot-devtools
